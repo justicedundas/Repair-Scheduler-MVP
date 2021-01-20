@@ -1,4 +1,7 @@
 # Reapair MIV
+Repo for minimal appointment scheduling application
+## DB Schema
+![SCHEMA]('./helpers.DbSchema.png')
 
 Service Request lifecycle:
 1. Init -> client form submission
@@ -8,22 +11,19 @@ Service Request lifecycle:
 5. Confirmation -> dispatcher confirms payment receipt, approves finalized submission
 6. Storage -> component unmounted, stored in database
 
-Service Request Object:
-```
-_id: ObjectID
-serviceType: string,
-client: {
-  userId: ObjectID || guest,
-  method: string,   // PHONE, EMAIL< ETC.
-  data: string      // email, phone number, etc.
-}
+### Elements:
+- Administrative:
+  - schedule
+  - employee
 
-```
-### Components:
-  * submission form
-    * Category: service
-    * Media: supporting image
-    * Description: additional information
+- Client
+
+- Appointment
+
+- Service Objects:
+  - service
+  - service_provided
+  - service_book
 
 
 ### Pages:
@@ -35,7 +35,6 @@ URLS:
 
 Login:
   - User
-  - Tech
   - Employee
   - Admin
 
@@ -48,3 +47,38 @@ Private:
 
 Tech:
   - Incoming service request, received from dispatcher
+
+
+### TODOS:
+- [x] Create skeleton
+
+- [ ] Create API
+  - [ ] Admin objects
+    - [ ] schedule
+    - [ ] employee
+  - [ ] Client object
+  - [ ] Appointment objects
+    - [ ] GET methods
+    - [ ] POST methods
+      - [ ] Create appointment
+    - [ ] Put methods
+      - [ ] Cancel appointment
+    - [ ] Delete methods
+      - [ ] Delete appointment
+  - [ ] Services Objects
+    - [ ] service_provided
+    - [ ] service_booked
+    - [ ] service
+
+- [ ] Create Mail server
+  - [ ] Setup Ubuntu server
+  - [ ] Postfix
+
+- [ ] Create UI
+  - [ ] Client
+    - [ ] Landing Page
+    - [ ] Service Selections
+    - [ ] Contact Page
+  - [ ] Employee
+  - [ ] Admin
+  - [ ] Mail

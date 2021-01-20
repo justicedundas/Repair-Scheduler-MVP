@@ -1,0 +1,14 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+<h4>Service Requests</h4>
+<ul class="list-group">
+  {{#each serviceRequests}}
+  <li class="list-group-item">
+    <p>
+      Date: {{this.date}}
+    </p>
+    <p>
+      Service: {{this.service}}
+    </p>
+  </li>
+  {{/each}}
+</ul>
