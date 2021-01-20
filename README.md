@@ -1,7 +1,7 @@
 # Repair MIV
 Repo for minimal appointment scheduling application
 ## DB Schema
-![schema]('helpers/images/DbSchema.png')
+![schema](helpers/images/DbSchema.png)
 =======
 # Repair MIV
 
