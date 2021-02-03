@@ -1,9 +1,9 @@
-# Repair MIV
+# Repair Scheduler
 Repo for minimal appointment scheduling application
 ## DB Schema
 ![schema](helpers/images/DbSchema.png)
 =======
-# Repair MIV
+
 
 Service Request lifecycle:
 1. Init -> client form submission
